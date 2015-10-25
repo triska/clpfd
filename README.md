@@ -87,6 +87,37 @@ You can use similar [PostScript
 instructions](http://www.metalevel.at/postscript/animations.html) to
 create custom animations for other examples.
 
+## Propagation strength of CLP(FD) constraints
+
+Since integer arithmetic is in general *undecidable*, CLP(FD)
+constraints are necessarily *incomplete*. This means that you cannot,
+in general, take the fact that a CLP(FD) constraint *succeeds* as an
+indication that there are any solutions. Therefore, you need to use
+[`call_residue_vars/2`]((http://www.swi-prolog.org/pldoc/man?predicate=call_residue_vars/2)
+to see if any constraints are still pending. For example:
+
+    :- use_module(library(clpfd)).
+
+    declarative_false :-
+            X #< Y,
+            Y #< X.
+
+With the above program, we get:
+
+    ?- declarative_false.
+    true.
+
+however, it is in fact `false`, because there are no solutions! The
+toplevel has omitted important constraints that are still pending. You
+can make them visible by wrapping the goal in `call_residue_vars/2`:
+
+    ?- call_residue_vars(declarative_false, Vs).
+    Vs = [X1, X2],
+    X1#=<X2+ -1,
+    X2#=<X1+ -1.
+
+There is a solution only if you can satisfy these residual goals.
+
 ## SICStus compatibility
 
 I am aiming for compatibility with the CLP(FD) system of SICStus
@@ -101,9 +132,11 @@ SICStus Prolog, and use it to solve more serious tasks with CLP(FD).
 
 I am extremely grateful to:
 
-[**Tom Schrijvers**](http://people.cs.kuleuven.be/~tom.schrijvers/), who
-has generously contributed several important constraint libraries to
-SWI-Prolog (`dif/2`!!), and from whom I learned a lot.
+[**Tom Schrijvers**](http://people.cs.kuleuven.be/~tom.schrijvers/),
+who has generously contributed several important constraint libraries
+to SWI-Prolog
+([`dif/2`](http://www.swi-prolog.org/pldoc/man?predicate=dif/2)!!),
+and from whom I learned a lot.
 
 [**Ulrich Neumerkel**](http://www.complang.tuwien.ac.at/ulrich/), who
 introduced me to constraint logic programming and was the first and
