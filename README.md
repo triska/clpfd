@@ -61,5 +61,11 @@ recommend you start with the following examples:
 [n_factorial.pl](n_factorial.pl): Shows how to use CLP(FD) constraints
 for declarative arithmetic, obtaining more general programs.
 
-[sudoku.pl](soduku.pl): Uses CLP(FD) constraints to model and solve a
+[sudoku.pl](sudoku.pl): Uses CLP(FD) constraints to model and solve a
 simple and well-known puzzle.
+
+[n_queens.pl](n_queens.pl): Model the so-called ["N-queens
+puzzle"](https://en.wikipedia.org/wiki/Eight_queens_puzzle) with
+CLP(FD) constraints. This example is a good candidate to experiment
+with different search strategies, specified as options for
+[`labeling/2`](http://www.swi-prolog.org/pldoc/man?predicate=labeling/2).
