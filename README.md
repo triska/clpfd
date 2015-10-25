@@ -70,6 +70,11 @@ CLP(FD) constraints. This example is a good candidate to experiment
 with different search strategies, specified as options of
 [`labeling/2`](http://www.swi-prolog.org/pldoc/man?predicate=labeling/2).
 
+[knight.pl](knight.pl): Closed Knight's Tour using CLP(FD)
+constraints. This is an example of using a more complex *global
+constraint* called
+[`circuit/1`](http://www.swi-prolog.org/pldoc/man?predicate=circuit/1).
+
 ## Animations
 
 If you are teaching Prolog and CLP(FD) constraints, it is very useful
