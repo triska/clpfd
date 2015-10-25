@@ -75,7 +75,7 @@ with different search strategies, specified as options of
 If you are teaching Prolog and CLP(FD) constraints, it is very useful
 to show *animations* of search processes. An instructional example:
 
-**[N-queens animation]**(http://www.metalevel.at/queens/): This
+[**N-queens animation**](http://www.metalevel.at/queens/): This
 visualizes the search process for the N-quens example.
 
 You can use similar [PostScript
