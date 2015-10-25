@@ -76,7 +76,7 @@ If you are teaching Prolog and CLP(FD) constraints, it is very useful
 to show *animations* of search processes. An instructional example:
 
 [**N-queens animation**](http://www.metalevel.at/queens/): This
-visualizes the search process for the N-quens example.
+visualizes the search process for the N-queens example.
 
 You can use similar [PostScript
 instructions](http://www.metalevel.at/postscript/animations.html) to
@@ -91,3 +91,23 @@ Prolog too. For example, instead of `(ins/2)`, you need to use
 
 For better performance, I highly recommend you obtain a copy of
 SICStus Prolog, and use it to solve more serious tasks with CLP(FD).
+
+## Acknowledgments
+
+I am extremely grateful to:
+
+[Tom Schrijvers](http://people.cs.kuleuven.be/~tom.schrijvers/), who
+has generously contributed several important constraint libraries to
+SWI-Prolog (`dif/2`!!), and from whom I learned a lot.
+
+[Ulrich Neumerkel](http://www.complang.tuwien.ac.at/ulrich/), who
+introduced me to constraint logic programming and was the first and
+most determined tester of my library, filing hundreds of comments. If
+you are teaching Prolog, I recommend you check out his [GUPU
+system](http://www.complang.tuwien.ac.at/ulrich/gupu/).
+
+[Mats Carlsson](https://www.sics.se/~matsc/), the designer and main
+implementor of SICStus Prolog and its superb [CLP(FD)
+library](https://sicstus.sics.se/sicstus/docs/latest4/html/sicstus.html/lib_002dclpfd.html#lib_002dclpfd).
+For any serious use of CLP(FD) constraints, make sure to check out his
+elegant and fast system.
