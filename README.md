@@ -13,8 +13,13 @@ programming with reasoning over specialised domains.
 
 In the case of CLP(FD), the domain is the set of _integers_.
 
-CLP(FD) constraints like `(#=)/2`, `(#\=)/2` and `(#<)/2` are meant to
-be used as pure alternatives for lower-level arithmetic primitives.
+CLP(FD) constraints like
+[`(#=)/2`](http://www.swi-prolog.org/pldoc/doc_for?object=%23%3D%20/%202),
+[`(#\=)/2`](http://www.swi-prolog.org/pldoc/doc_for?object=%23\%3D%20/%202),
+and
+[`(#<)/2`](http://www.swi-prolog.org/pldoc/doc_for?object=%23%3C%20/%202)
+are meant to be used as pure alternatives for lower-level arithmetic
+primitives. Importantly, they can be used in *all directions*.
 
 For example, we can use CLP(FD) constraints to obtain a version of
 `n_factorial/2` that can be used as a true relation:
@@ -59,7 +64,7 @@ To get an idea of the power and usefulness of CLP(FD) constraints, I
 recommend you start with the following examples, in order:
 
 [**n_factorial.pl**](n_factorial.pl): Shows how to use CLP(FD) constraints
-for declarative arithmetic, obtaining more general programs.
+for declarative integer arithmetic, obtaining more general programs.
 
 [**sudoku.pl**](sudoku.pl): Uses CLP(FD) constraints to model and solve a
 simple and well-known puzzle.
@@ -93,7 +98,7 @@ Since integer arithmetic is in general *undecidable*, CLP(FD)
 constraints are necessarily *incomplete*. This means that you cannot,
 in general, take the fact that a CLP(FD) constraint *succeeds* as an
 indication that there are any solutions. Therefore, you need to use
-[`call_residue_vars/2`]((http://www.swi-prolog.org/pldoc/man?predicate=call_residue_vars/2)
+[`call_residue_vars/2`](http://www.swi-prolog.org/pldoc/man?predicate=call_residue_vars/2)
 to see if any constraints are still pending. For example:
 
     :- use_module(library(clpfd)).
