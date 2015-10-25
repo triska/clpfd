@@ -67,5 +67,15 @@ simple and well-known puzzle.
 [n_queens.pl](n_queens.pl): Model the so-called ["N-queens
 puzzle"](https://en.wikipedia.org/wiki/Eight_queens_puzzle) with
 CLP(FD) constraints. This example is a good candidate to experiment
-with different search strategies, specified as options for
+with different search strategies, specified as options of
 [`labeling/2`](http://www.swi-prolog.org/pldoc/man?predicate=labeling/2).
+
+## SICStus compatibility
+
+I am aiming for compatibility with the CLP(FD) system of SICStus
+Prolog. All examples work with at most small changes with SICStus
+Prolog too. For example, instead of `(ins/2)`, you need to use
+`domain/3` in SICStus Prolog.
+
+For better performance, I highly recommend you obtain a copy of
+SICStus Prolog, and use it to solve more serious tasks with CLP(FD).
