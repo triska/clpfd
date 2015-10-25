@@ -96,17 +96,17 @@ SICStus Prolog, and use it to solve more serious tasks with CLP(FD).
 
 I am extremely grateful to:
 
-[Tom Schrijvers](http://people.cs.kuleuven.be/~tom.schrijvers/), who
+[**Tom Schrijvers**](http://people.cs.kuleuven.be/~tom.schrijvers/), who
 has generously contributed several important constraint libraries to
 SWI-Prolog (`dif/2`!!), and from whom I learned a lot.
 
-[Ulrich Neumerkel](http://www.complang.tuwien.ac.at/ulrich/), who
+[**Ulrich Neumerkel**](http://www.complang.tuwien.ac.at/ulrich/), who
 introduced me to constraint logic programming and was the first and
 most determined tester of my library, filing hundreds of comments. If
 you are teaching Prolog, I recommend you check out his [GUPU
 system](http://www.complang.tuwien.ac.at/ulrich/gupu/).
 
-[Mats Carlsson](https://www.sics.se/~matsc/), the designer and main
+[**Mats Carlsson**](https://www.sics.se/~matsc/), the designer and main
 implementor of SICStus Prolog and its superb [CLP(FD)
 library](https://sicstus.sics.se/sicstus/docs/latest4/html/sicstus.html/lib_002dclpfd.html#lib_002dclpfd).
 For any serious use of CLP(FD) constraints, make sure to check out his
