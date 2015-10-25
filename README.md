@@ -15,7 +15,7 @@ In the case of CLP(FD), the domain is the set of _integers_.
 
 CLP(FD) constraints like
 [`(#=)/2`](http://www.swi-prolog.org/pldoc/doc_for?object=%23%3D%20/%202),
-[`(#\=)/2`](http://www.swi-prolog.org/pldoc/doc_for?object=%23\%3D%20/%202),
+[`(#\=)/2`](http://www.swi-prolog.org/pldoc/doc_for?object=%23%5C%3D%20/%202),
 and
 [`(#<)/2`](http://www.swi-prolog.org/pldoc/doc_for?object=%23%3C%20/%202)
 are meant to be used as pure alternatives for lower-level arithmetic
