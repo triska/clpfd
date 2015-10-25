@@ -1,4 +1,4 @@
-# CLP(FD) -- Constraint Logic Programming over Finite Domains
+# CLP(FD) &mdash; Constraint Logic Programming over Finite Domains
 
 CLP(FD), Constraint Logic Programming over Finite Domains, is
 available in SWI-Prolog as
