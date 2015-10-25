@@ -60,11 +60,37 @@ and also in the most general case:
 
 This repository contains several example programs.
 
-To get an idea of the power and usefulness of CLP(FD) constraints, I
-recommend you start with the following examples, in order:
+To get an idea of the power, usefulness and scope of CLP(FD)
+constraints, I recommend you work through the examples in the
+following order:
 
 [**n_factorial.pl**](n_factorial.pl): Shows how to use CLP(FD) constraints
 for declarative integer arithmetic, obtaining more general programs.
+
+[**sendmory.pl**](sendmory.pl) A simple cryptoarithmetic puzzle. The
+task is to assign one of the digits 0,...,9 to each of the letters
+S,E,N,D,M,O,R and Y in such a way that the following calculation is
+valid, and no leading zeroes appear:
+
+        S E N D
+      + M O R E
+      ---------
+    = M O N E Y
+
+This example illustrates several very important things:
+
+* It is the first example that shows *residual constraints* for the
+  most general query. They are equivalent to the original query.
+
+* It is good practice to separate the kernel relation from
+  `labeling/2`. See the [CLP(FD)
+  documentation](http://www.swi-prolog.org/man/clpfd.html) for more
+  information about this subject.
+
+* You can use this example to illustrate that the CLP(FD) system is
+  able to propagate many things that can also be found with human
+  reasoning. For example, due to the nature of the above calculation
+  and the prohibition of leading zeroes, `M` is necessarily 1.
 
 [**sudoku.pl**](sudoku.pl): Uses CLP(FD) constraints to model and solve a
 simple and well-known puzzle.
