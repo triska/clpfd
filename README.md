@@ -14,5 +14,40 @@ programming with reasoning over specialised domains.
 In the case of CLP(FD), the domain is the set of _integers_.
 
 CLP(FD) constraints like `(#=)/2`, `(#\=)/2` and `(#<)/2` are meant to
-be used as pure alternatives over lower-level arithmetic primitives.
+be used as pure alternatives for lower-level arithmetic primitives.
+
+For example, we can use CLP(FD) constraints to obtain a version of
+`n_factorial/2` that can be used as a true relation:
+
+    :- use_module(library(clpfd)).
+
+    n_factorial(0, 1).
+    n_factorial(N, F) :-
+            N #> 0,
+            N1 #= N - 1,
+            F #= N * F1,
+            n_factorial(N1, F1).
+
+This works in all directions, for example:
+
+    ?- n_factorial(47, F).
+    258623241511168180642964355153611979969197632389120000000000 ;
+    false.
+
+and also:
+
+    ?- n_factorial(N, 1).
+    N = 0 ;
+    N = 1 ;
+    false.
+
+and also in the most general case:
+
+    ?- n_factorial(N, F).
+    N = 0,
+    F = 1 ;
+    N = F, F = 1 ;
+    N = F, F = 2 ;
+    N = 3,
+    F = 6 .
 
