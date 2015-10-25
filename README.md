@@ -56,7 +56,7 @@ and also in the most general case:
 This repository contains several example programs.
 
 To get an idea of the power and usefulness of CLP(FD) constraints, I
-recommend you start with the following examples:
+recommend you start with the following examples, in order:
 
 [n_factorial.pl](n_factorial.pl): Shows how to use CLP(FD) constraints
 for declarative arithmetic, obtaining more general programs.
@@ -69,6 +69,18 @@ puzzle"](https://en.wikipedia.org/wiki/Eight_queens_puzzle) with
 CLP(FD) constraints. This example is a good candidate to experiment
 with different search strategies, specified as options of
 [`labeling/2`](http://www.swi-prolog.org/pldoc/man?predicate=labeling/2).
+
+## Animations
+
+If you are teaching Prolog and CLP(FD) constraints, it is very useful
+to show *animations* of search processes. An instructional example:
+
+**[N-queens animation]**(http://www.metalevel.at/queens/): This
+visualizes the search process for the N-quens example.
+
+You can use similar [PostScript
+instructions](http://www.metalevel.at/postscript/animations.html) to
+create custom animations for other examples.
 
 ## SICStus compatibility
 
