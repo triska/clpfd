@@ -51,3 +51,15 @@ and also in the most general case:
     N = 3,
     F = 6 .
 
+## Example programs
+
+This repository contains several example programs.
+
+To get an idea of the power and usefulness of CLP(FD) constraints, I
+recommend you start with the following examples:
+
+[n_factorial.pl](n_factorial.pl): Shows how to use CLP(FD) constraints
+for declarative arithmetic, obtaining more general programs.
+
+[sudoku.pl](soduku.pl): Uses CLP(FD) constraints to model and solve a
+simple and well-known puzzle.
