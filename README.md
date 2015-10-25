@@ -58,19 +58,19 @@ This repository contains several example programs.
 To get an idea of the power and usefulness of CLP(FD) constraints, I
 recommend you start with the following examples, in order:
 
-[n_factorial.pl](n_factorial.pl): Shows how to use CLP(FD) constraints
+[**n_factorial.pl**](n_factorial.pl): Shows how to use CLP(FD) constraints
 for declarative arithmetic, obtaining more general programs.
 
-[sudoku.pl](sudoku.pl): Uses CLP(FD) constraints to model and solve a
+[**sudoku.pl**](sudoku.pl): Uses CLP(FD) constraints to model and solve a
 simple and well-known puzzle.
 
-[n_queens.pl](n_queens.pl): Model the so-called ["N-queens
+[**n_queens.pl**](n_queens.pl): Model the so-called ["N-queens
 puzzle"](https://en.wikipedia.org/wiki/Eight_queens_puzzle) with
 CLP(FD) constraints. This example is a good candidate to experiment
 with different search strategies, specified as options of
 [`labeling/2`](http://www.swi-prolog.org/pldoc/man?predicate=labeling/2).
 
-[knight.pl](knight.pl): Closed Knight's Tour using CLP(FD)
+[**knight.pl**](knight.pl): Closed Knight's Tour using CLP(FD)
 constraints. This is an example of using a more complex *global
 constraint* called
 [`circuit/1`](http://www.swi-prolog.org/pldoc/man?predicate=circuit/1).
