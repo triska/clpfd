@@ -113,7 +113,15 @@ following order:
    squares*](http://mathworld.wolfram.com/MagicSquare.html). This is a good
    example to learn about **symmetry breaking** constraints: Consider how
    you can eliminate solutions that are rotations, reflections etc. of
-   other solutions, by imposing suitable further constraints.
+   other solutions, by imposing suitable further constraints. For example,
+   the following two solutions are essentially identical, since one can be
+   obtained from the other by reflecting elements along the main diagonal:
+
+   ![Magic hexagon solution](figures/magic_hexagon1.png) ![Magic hexagon transposed](figures/magic_hexagon2.png)
+
+   What constraints would you impose to get only a single solution in such
+   cases, without losing any solutions that do not belong to the same
+   equivalence class?
 
 5. [**magic_hexagon.pl**](magic_hexagon.pl): Generate solutions for the
    [*magic hexagon*](http://mathworld.wolfram.com/MagicHexagon.html) of
