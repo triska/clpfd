@@ -96,13 +96,28 @@ following order:
 3. [**sudoku.pl**](sudoku.pl): Uses CLP(FD) constraints to model and solve a
    simple and well-known puzzle.
 
-4. [**n_queens.pl**](n_queens.pl): Model the so-called ["N-queens
-   puzzle"](https://en.wikipedia.org/wiki/Eight_queens_puzzle) with
+4. [**magic_hexagon.pl**](magic_hexagon.pl): Generate solutions for the
+   [*magic hexagon*](http://mathworld.wolfram.com/MagicHexagon.html) of
+   order 3. The task is to place the integers 1,...,19 in the following
+   grid so that the sum of all numbers in a straight line (there are lines
+   of length 3, 4 and 5) is equal to 38:
+
+   ![Magic hexagon grid](magic_hexagon.png)
+
+   An example of a solution is:
+
+   ![Magic hexagon solution](magic_hexagon_solution.png)
+
+   This is a task that looks very simple, yet is almost impossibly hard to
+   solve manually.
+
+5. [**n_queens.pl**](n_queens.pl): Model the so-called [*N-queens
+   puzzle*](https://en.wikipedia.org/wiki/Eight_queens_puzzle) with
    CLP(FD) constraints. This example is a good candidate to experiment
    with different search strategies, specified as options of
    [`labeling/2`](http://www.swi-prolog.org/pldoc/man?predicate=labeling/2).
 
-5. [**knight.pl**](knight.pl): Closed Knight's Tour using CLP(FD)
+6. [**knight.pl**](knight.pl): Closed Knight's Tour using CLP(FD)
    constraints. This is an example of using a more complex *global
    constraint* called
    [`circuit/1`](http://www.swi-prolog.org/pldoc/man?predicate=circuit/1).
