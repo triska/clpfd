@@ -73,10 +73,10 @@ following order:
    letters S,E,N,D,M,O,R and Y in such a way that the following
    calculation is valid, and no leading zeroes appear:
 
-           S E N D
-         + M O R E
-         ---------
-       = M O N E Y
+            S E N D
+          + M O R E
+          ---------
+        = M O N E Y
 
    This example illustrates several very important things:
 
