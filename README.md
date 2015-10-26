@@ -128,10 +128,14 @@ following order:
    impossibly hard to solve manually. It is easy to solve with CLP(FD).
 
 6. [**n_queens.pl**](n_queens.pl): Model the so-called [*N-queens
-   puzzle*](https://en.wikipedia.org/wiki/Eight_queens_puzzle) with
-   CLP(FD) constraints. This example is a good candidate to experiment
-   with different **search strategies**, specified as options of
+   puzzle*](https://en.wikipedia.org/wiki/Eight_queens_puzzle) with CLP(FD)
+   constraints. This example is a good candidate to experiment with
+   different **search strategies**, specified as options of
    [`labeling/2`](http://www.swi-prolog.org/pldoc/man?predicate=labeling/2).
+   For example, using the labeling strategy `ff`, you can easliy find
+   solutions for 100 queens and more. Sample solution for 50 queens:
+
+   ![Solution for 50 queens](queens50_solution.png)
 
 7. [**knight.pl**](knight.pl): Closed Knight's Tour using CLP(FD)
    constraints. This is an example of using a more complex **global
