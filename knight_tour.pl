@@ -9,7 +9,7 @@
 
 n_tour(N, Ts) :-
         length(Ts, N),
-        maplist(length_(N), Ts),
+        maplist(same_length(Ts), Ts),
         append(Ts, Vs),
         successors(Vs, N, 1),
         circuit(Vs).
@@ -17,15 +17,12 @@ n_tour(N, Ts) :-
 successors([], _, _).
 successors([V|Vs], N, K0) :-
         findall(Num, n_k_next(N, K0, Num), [Next|Nexts]),
-        nums_to_dom(Nexts, Next, Dom),
+        foldl(num_to_dom, Nexts, Next, Dom),
         V in Dom,
         K1 #= K0 + 1,
         successors(Vs, N, K1).
 
-nums_to_dom([], D, D).
-nums_to_dom([N|Ns], D0, D) :- nums_to_dom(Ns, D0 \/ N, D).
-
-length_(L, Ls) :- length(Ls, L).
+num_to_dom(N, D0, D0\/N).
 
 n_x_y_k(N, X, Y, K) :- [X,Y] ins 1..N, K #= N*(Y-1) + X.
 
