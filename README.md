@@ -19,7 +19,8 @@ CLP(FD) constraints like
 and
 [`(#<)/2`](http://www.swi-prolog.org/pldoc/doc_for?object=%23%3C%20/%202)
 are meant to be used as pure alternatives for lower-level arithmetic
-primitives. Importantly, they can be used in *all directions*.
+primitives over integers. Importantly, they can be used in *all
+directions*.
 
 For example, we can use CLP(FD) constraints to obtain a version of
 `n_factorial/2` that can be used as a true relation:
@@ -65,7 +66,7 @@ constraints, I recommend you work through the examples in the
 following order:
 
 1. [**n_factorial.pl**](n_factorial.pl): Shows how to use CLP(FD)
-   constraints for declarative integer arithmetic, obtaining more
+   constraints for **declarative integer arithmetic**, obtaining more
    general programs.
 
 2. [**sendmory.pl**](sendmory.pl) A simple cryptoarithmetic puzzle.
@@ -80,27 +81,29 @@ following order:
 
    This example illustrates several very important things:
 
-   * It is the first example that shows *residual constraints* for the
+   * It is the first example that shows **residual constraints** for the
      most general query. They are equivalent to the original query.
 
-   * It is good practice to separate the kernel relation from
+   * It is good practice to separate the **kernel relation** from
      `labeling/2`. See the [CLP(FD)
      documentation](http://www.swi-prolog.org/man/clpfd.html) for more
      information about this subject.
 
-   * You can use this example to illustrate that the CLP(FD) system is
-     able to propagate many things that can also be found with human
-     reasoning. For example, due to the nature of the above calculation
-     and the prohibition of leading zeroes, `M` is necessarily 1.
+   * You can use this example to illustrate that the CLP(FD) system is able
+     to **propagate** many things that can also be found with human
+     reasoning. For example, due to the nature of the above calculation and
+     the prohibition of leading zeroes, `M` is necessarily 1.
 
 3. [**sudoku.pl**](sudoku.pl): Uses CLP(FD) constraints to model and solve
    a simple and well-known puzzle. This example is well suited for
-   understanding the impact of different propagation strengths: Use it to
-   compare
+   understanding the impact of different **propagation strengths**: Use it
+   to compare
    [`all_different/1`](http://www.swi-prolog.org/pldoc/man?predicate=all_different/1)
-   and [`all_distinct/1`](http://www.swi-prolog.org/pldoc/man?predicate=all_distinct/1) on different puzzles:
+   and
+   [`all_distinct/1`](http://www.swi-prolog.org/pldoc/man?predicate=all_distinct/1)
+   on different puzzles:
 
-   ![Sudoku with all_different/1](sudoku_all_different.png)       ![Sudoku with all_distinct/1](sudoku_all_distinct.png)
+   ![Sudoku with all_different/1](sudoku_all_different.png) ![Sudoku with all_distinct/1](sudoku_all_distinct.png)
 
    The small dots in each cell indicate how many elements are pruned by
    different consistency techniques. In many Sudoku puzzles, using
@@ -130,12 +133,12 @@ following order:
 6. [**n_queens.pl**](n_queens.pl): Model the so-called [*N-queens
    puzzle*](https://en.wikipedia.org/wiki/Eight_queens_puzzle) with
    CLP(FD) constraints. This example is a good candidate to experiment
-   with different search strategies, specified as options of
+   with different **search strategies**, specified as options of
    [`labeling/2`](http://www.swi-prolog.org/pldoc/man?predicate=labeling/2).
 
 7. [**knight.pl**](knight.pl): Closed Knight's Tour using CLP(FD)
-   constraints. This is an example of using a more complex *global
-   constraint* called
+   constraints. This is an example of using a more complex **global
+   constraint** called
    [`circuit/1`](http://www.swi-prolog.org/pldoc/man?predicate=circuit/1).
 
 ## Animations
