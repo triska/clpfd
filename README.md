@@ -137,7 +137,7 @@ following order:
 
    ![Solution for 8 queens](queens8_solution.png) ![Solution for 50 queens](queens50_solution.png)
 
-7. [**knight.pl**](knight.pl): Closed Knight's Tour using CLP(FD)
+7. [**knight_tour.pl**](knight_tour.pl): Closed Knight's Tour using CLP(FD)
    constraints. This is an example of using a more complex **global
    constraint** called
    [`circuit/1`](http://www.swi-prolog.org/pldoc/man?predicate=circuit/1).
