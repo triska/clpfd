@@ -106,7 +106,13 @@ following order:
    different consistency techniques. In many Sudoku puzzles, using
    `all_distinct/1` makes labeling unnecessary.
 
-4. [**magic_hexagon.pl**](magic_hexagon.pl): Generate solutions for the
+4. [**magic_square.pl**](magic_square.pl): CLP(FD) formulation of [*magic
+   squares*](http://mathworld.wolfram.com/MagicSquare.html). This is a good
+   example to learn about **symmetry breaking** constraints: Consider how
+   you can eliminate solutions that are rotations, reflections etc. of
+   other solutions, by imposing suitable further constraints.
+
+5. [**magic_hexagon.pl**](magic_hexagon.pl): Generate solutions for the
    [*magic hexagon*](http://mathworld.wolfram.com/MagicHexagon.html) of
    order 3. The task is to place the integers 1,...,19 in the following
    grid so that the sum of all numbers in a straight line (there are lines
@@ -118,16 +124,16 @@ following order:
 
    ![Magic hexagon solution](magic_hexagon_solution.png)
 
-   This is a task that looks very simple, yet is almost impossibly hard to
-   solve manually.
+   This is an example of a task that looks very simple, yet is almost
+   impossibly hard to solve manually. It is easy to solve with CLP(FD).
 
-5. [**n_queens.pl**](n_queens.pl): Model the so-called [*N-queens
+6. [**n_queens.pl**](n_queens.pl): Model the so-called [*N-queens
    puzzle*](https://en.wikipedia.org/wiki/Eight_queens_puzzle) with
    CLP(FD) constraints. This example is a good candidate to experiment
    with different search strategies, specified as options of
    [`labeling/2`](http://www.swi-prolog.org/pldoc/man?predicate=labeling/2).
 
-6. [**knight.pl**](knight.pl): Closed Knight's Tour using CLP(FD)
+7. [**knight.pl**](knight.pl): Closed Knight's Tour using CLP(FD)
    constraints. This is an example of using a more complex *global
    constraint* called
    [`circuit/1`](http://www.swi-prolog.org/pldoc/man?predicate=circuit/1).
