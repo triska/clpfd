@@ -79,7 +79,7 @@ following order:
           ---------
         = M O N E Y
 
-   This example illustrates several very important things:
+   This example illustrates several very important concepts:
 
    * It is the first example that shows **residual constraints** for the
      most general query. They are equivalent to the original query.
