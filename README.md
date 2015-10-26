@@ -93,8 +93,18 @@ following order:
      reasoning. For example, due to the nature of the above calculation
      and the prohibition of leading zeroes, `M` is necessarily 1.
 
-3. [**sudoku.pl**](sudoku.pl): Uses CLP(FD) constraints to model and solve a
-   simple and well-known puzzle.
+3. [**sudoku.pl**](sudoku.pl): Uses CLP(FD) constraints to model and solve
+   a simple and well-known puzzle. This example is well suited for
+   understanding the impact of different propagation strengths: Use it to
+   compare
+   [`all_different/1`](http://www.swi-prolog.org/pldoc/man?predicate=all_different/1)
+   and [`all_distinct/1`](http://www.swi-prolog.org/pldoc/man?predicate=all_distinct/1) on different puzzles:
+
+   ![Sudoku with all_different/1](sudoku_all_different.png)  ![Sudoku with all_distinct/1](sudoku_all_distinct.png)
+
+   The small dots in each cell indicate how many elements are pruned by
+   different consistency techniques. In many Sudoku puzzles, using
+   `all_distinct/1` makes labeling unnecessary.
 
 4. [**magic_hexagon.pl**](magic_hexagon.pl): Generate solutions for the
    [*magic hexagon*](http://mathworld.wolfram.com/MagicHexagon.html) of
