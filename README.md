@@ -133,9 +133,9 @@ following order:
    different **search strategies**, specified as options of
    [`labeling/2`](http://www.swi-prolog.org/pldoc/man?predicate=labeling/2).
    For example, using the labeling strategy `ff`, you can easliy find
-   solutions for 100 queens and more. Sample solution for 50 queens:
+   solutions for 100 queens and more. Sample solutions for 8 and 50 queens:
 
-   ![Solution for 50 queens](queens50_solution.png)
+   ![Solution for 8 queens](queens8_solution.png) ![Solution for 50 queens](queens50_solution.png)
 
 7. [**knight.pl**](knight.pl): Closed Knight's Tour using CLP(FD)
    constraints. This is an example of using a more complex **global
