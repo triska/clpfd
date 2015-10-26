@@ -175,6 +175,10 @@ most determined tester of my library, filing hundreds of comments. If
 you are teaching Prolog, I recommend you check out his [GUPU
 system](http://www.complang.tuwien.ac.at/ulrich/gupu/).
 
+[**Nysret Musliu**](http://dbai.tuwien.ac.at/staff/musliu/), my thesis
+advisor, whose interest in combinatorial tasks and constraint
+satisfaction highly motivated me to work in this area.
+
 [**Mats Carlsson**](https://www.sics.se/~matsc/), the designer and main
 implementor of SICStus Prolog and its superb [CLP(FD)
 library](https://sicstus.sics.se/sicstus/docs/latest4/html/sicstus.html/lib_002dclpfd.html#lib_002dclpfd).
