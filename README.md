@@ -66,8 +66,8 @@ constraints, I recommend you work through the examples in the
 following order:
 
 1. [**n_factorial.pl**](n_factorial.pl): Shows how to use CLP(FD)
-   constraints for **declarative integer arithmetic**, obtaining more
-   general programs.
+   constraints for **declarative integer arithmetic**, obtaining very
+   general programs that can be used in all directions.
 
 2. [**sendmory.pl**](sendmory.pl) A simple cryptoarithmetic puzzle.
    The task is to assign one of the digits 0,...,9 to each of the
