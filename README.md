@@ -84,7 +84,7 @@ following order:
    * It is the first example that shows **residual constraints** for the
      most general query. They are equivalent to the original query.
 
-   * It is good practice to separate the **kernel relation** from
+   * It is good practice to separate the **core relation** from
      `labeling/2`. See the [CLP(FD)
      documentation](http://www.swi-prolog.org/man/clpfd.html) for more
      information about this subject.
