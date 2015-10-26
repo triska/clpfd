@@ -123,7 +123,7 @@ following order:
    cases, without losing any solutions that do not belong to the same
    equivalence class?
 
-5. [**magic_hexagon.pl**](magic_hexagon.pl): Generate solutions for the
+5. [**magic_hexagon.pl**](magic_hexagon.pl): Uses CLP(FD) to describe a
    [*magic hexagon*](http://mathworld.wolfram.com/MagicHexagon.html) of
    order 3. The task is to place the integers 1,...,19 in the following
    grid so that the sum of all numbers in a straight line (there are lines
