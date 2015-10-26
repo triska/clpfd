@@ -117,7 +117,7 @@ following order:
    the following two solutions are essentially identical, since one can be
    obtained from the other by reflecting elements along the main diagonal:
 
-   ![Magic hexagon solution](figures/magic_hexagon1.png) ![Magic hexagon transposed](figures/magic_hexagon2.png)
+   ![Magic square solution](figures/magic_square1.png) ![Magic square transposed](figures/magic_square2.png)
 
    What constraints would you impose to get only a single solution in such
    cases, without losing any solutions that do not belong to the same
