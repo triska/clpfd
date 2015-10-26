@@ -141,6 +141,9 @@ following order:
    constraints. This is an example of using a more complex **global
    constraint** called
    [`circuit/1`](http://www.swi-prolog.org/pldoc/man?predicate=circuit/1).
+   Sample solutions, using an 8x8 and a 16x16 board:
+
+   ![Closed knight's tour on an 8x8 board](knight8_solution.png) ![Closed knight's tour on a 16x16 board](knight16_solution.png) 
 
 ## Animations
 
