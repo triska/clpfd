@@ -100,7 +100,7 @@ following order:
    [`all_different/1`](http://www.swi-prolog.org/pldoc/man?predicate=all_different/1)
    and [`all_distinct/1`](http://www.swi-prolog.org/pldoc/man?predicate=all_distinct/1) on different puzzles:
 
-   ![Sudoku with all_different/1](sudoku_all_different.png)  ![Sudoku with all_distinct/1](sudoku_all_distinct.png)
+   ![Sudoku with all_different/1](sudoku_all_different.png)       ![Sudoku with all_distinct/1](sudoku_all_distinct.png)
 
    The small dots in each cell indicate how many elements are pruned by
    different consistency techniques. In many Sudoku puzzles, using
