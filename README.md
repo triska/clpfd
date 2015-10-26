@@ -119,13 +119,10 @@ following order:
    [*magic hexagon*](http://mathworld.wolfram.com/MagicHexagon.html) of
    order 3. The task is to place the integers 1,...,19 in the following
    grid so that the sum of all numbers in a straight line (there are lines
-   of length 3, 4 and 5) is equal to 38:
+   of length 3, 4 and 5) is equal to 38. One solution of this task is shown
+   in the right picture:
 
-   ![Magic hexagon grid](magic_hexagon.png)
-
-   An example of a solution is:
-
-   ![Magic hexagon solution](magic_hexagon_solution.png)
+   ![Magic hexagon grid](magic_hexagon.png) ![Magic hexagon solution](magic_hexagon_solution.png)
 
    This is an example of a task that looks very simple, yet is almost
    impossibly hard to solve manually. It is easy to solve with CLP(FD).
