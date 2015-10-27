@@ -67,7 +67,9 @@ following order:
 
 1. [**n_factorial.pl**](n_factorial.pl): Shows how to use CLP(FD)
    constraints for **declarative integer arithmetic**, obtaining very
-   general programs that can be used in all directions.
+   general programs that can be used in all directions. Declarative
+   integer arithmetic is the simplest and most common use of CLP(FD)
+   constraints, helping you to increase the purity of your programs.
 
 2. [**sendmory.pl**](sendmory.pl) A simple cryptoarithmetic puzzle.
    The task is to assign one of the digits 0,...,9 to each of the
@@ -105,9 +107,9 @@ following order:
 
    ![Sudoku with all_different/1](figures/sudoku_all_different.png) ![Sudoku with all_distinct/1](figures/sudoku_all_distinct.png)
 
-   The small dots in each cell indicate how many elements are pruned by
-   different consistency techniques. In many Sudoku puzzles, using
-   `all_distinct/1` makes labeling unnecessary.
+   The small dots in each cell indicate how many elements are pruned
+   by different **consistency techniques**. In many Sudoku puzzles,
+   using `all_distinct/1` makes labeling unnecessary.
 
 4. [**magic_square.pl**](magic_square.pl): CLP(FD) formulation of [*magic
    squares*](http://mathworld.wolfram.com/MagicSquare.html). This is a good
@@ -200,13 +202,14 @@ There is a solution only if you can satisfy these residual goals.
 
 ## SICStus compatibility
 
-I am aiming for compatibility with the CLP(FD) system of SICStus
-Prolog. All examples work with at most small changes with SICStus
-Prolog too. For example, instead of `(ins/2)`, you need to use
-`domain/3` in SICStus Prolog.
+With SWI-Prolog's `library(clpfd)`, I am generally aiming for API
+compatibility with SICStus Prolog. Therefore, all examples work with
+at most small changes with SICStus Prolog too. For example, instead of
+`(ins)/2`, you need to use `domain/3` in SICStus Prolog.
 
-For better performance, I highly recommend you obtain a copy of
-SICStus Prolog, and use it to solve more serious tasks with CLP(FD).
+For better performance and many more specialised constraints, I highly
+recommend you obtain a copy of SICStus Prolog, and use it to solve
+more serious tasks with CLP(FD).
 
 ## Acknowledgments
 
