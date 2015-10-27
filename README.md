@@ -160,15 +160,15 @@ following order:
 
 ## Animations
 
-If you are teaching Prolog and CLP(FD) constraints, it is very useful
+When studying Prolog and CLP(FD) constraints, it is often very useful
 to show *animations* of search processes. An instructional example:
 
 [**N-queens animation**](http://www.metalevel.at/queens/): This
 visualizes the search process for the N-queens example.
 
-You can use similar [PostScript
-instructions](http://www.metalevel.at/postscript/animations.html) to
-create custom animations for other examples.
+You can use similar PostScript instructions to create [custom
+animations](http://www.metalevel.at/postscript/animations.html) for
+other examples.
 
 ## Propagation strength of CLP(FD) constraints
 
