@@ -72,7 +72,7 @@ following order:
    constraints. They are easy to understand and use this way, and
    often increase generality and logical purity of your code.
 
-2. [**sendmory.pl**](sendmory.pl) A simple cryptoarithmetic puzzle.
+2. [**sendmory.pl**](sendmory.pl): A simple cryptoarithmetic puzzle.
    The task is to assign one of the digits 0,...,9 to each of the
    letters S,E,N,D,M,O,R and Y in such a way that the following
    calculation is valid, and no leading zeroes appear:
