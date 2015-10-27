@@ -69,7 +69,8 @@ following order:
    constraints for **declarative integer arithmetic**, obtaining very
    general programs that can be used in all directions. Declarative
    integer arithmetic is the simplest and most common use of CLP(FD)
-   constraints, helping you to increase the purity of your programs.
+   constraints. They are easy to understand and use this way, and
+   often increase generality and logical purity of your code.
 
 2. [**sendmory.pl**](sendmory.pl) A simple cryptoarithmetic puzzle.
    The task is to assign one of the digits 0,...,9 to each of the
