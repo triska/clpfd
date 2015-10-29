@@ -59,7 +59,8 @@ and also in the most general case:
 
 ## Example programs
 
-This repository contains several example programs.
+This repository contains several example programs. The main predicates
+are all completely pure and can be used as true relations.
 
 To get an idea of the power, usefulness and scope of CLP(FD)
 constraints, I recommend you work through the examples in the
