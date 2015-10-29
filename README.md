@@ -135,8 +135,10 @@ following order:
 
    ![Magic hexagon grid](figures/magic_hexagon.png) ![Magic hexagon solution](figures/magic_hexagon_solution.png)
 
-   This is an example of a task that looks very simple, yet is almost
-   impossibly hard to solve manually. It is easy to solve with CLP(FD).
+   This is an example of a task that looks very simple at first, yet
+   is almost impossibly hard to solve manually. It is easy to solve
+   with CLP(FD) constraints though. Use the constraint solver to show
+   that the solution of this task is unique up to isomorphism.
 
 6. [**n_queens.pl**](n_queens.pl): Model the so-called [*N-queens
    puzzle*](https://en.wikipedia.org/wiki/Eight_queens_puzzle) with CLP(FD)
@@ -156,7 +158,10 @@ following order:
    with a global constraint. Sample solutions, using an 8x8 and a 16x16
    board:
 
-   ![Closed knight's tour on an 8x8 board](figures/knight8_solution.png) ![Closed knight's tour on a 16x16 board](figures/knight16_solution.png) 
+   ![Closed knight's tour on an 8x8 board](figures/knight8_solution.png) ![Closed knight's tour on a 16x16 board](figures/knight16_solution.png)
+
+   Decide whether `circuit/1` can also be used to model tours that are
+   not necessarily closed. If not, why not? If possible, do it.
 
 ## Animations
 
