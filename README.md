@@ -151,6 +151,9 @@ following order:
 
    ![Solution for 8 queens](figures/queens8_solution.png) ![Solution for 50 queens](figures/queens50_solution.png)
 
+   Try to find solutions for larger N. Reorder the variables so that
+   `ff` breaks ties by selecting more central variables first.
+
 7. [**knight_tour.pl**](knight_tour.pl): Closed Knight's Tour using CLP(FD)
    constraints. This is an example of using a more complex **global
    constraint** called
