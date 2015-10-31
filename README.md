@@ -6,8 +6,8 @@ available in SWI-Prolog as
 
 This repository contains usage examples and tests of the library.
 
-A short version of the library documentation, usable as supplementary
-lecture material, is available as [**clpfd.pdf**](clpfd.pdf).
+[**clpfd.pdf**](clpfd.pdf) is a _shortened version_ of the library
+documentation, intended as supplementary lecture material.
 
 ## Using CLP(FD) constraints
 
