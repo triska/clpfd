@@ -228,6 +228,9 @@ more serious tasks with CLP(FD).
 
 I am extremely grateful to:
 
+[**Jan Wielemaker**](http://www.swi-prolog.org) for providing the
+Prolog system that made all this possible in the first place.
+
 [**Tom Schrijvers**](http://people.cs.kuleuven.be/~tom.schrijvers/),
 who has generously contributed several important constraint libraries
 to SWI-Prolog
