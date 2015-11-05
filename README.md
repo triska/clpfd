@@ -224,6 +224,114 @@ For better performance and many more specialised constraints, I highly
 recommend you obtain a copy of SICStus Prolog, and use it to solve
 more serious tasks with CLP(FD).
 
+## An impure alternative: Low-level integer arithmetic
+
+Suppose for a moment that CLP(FD) constraints were not available in
+your Prolog system, or that you do not want to use them. How do we
+formulate `n_factorial/2` with more primitive integer arithmetic?
+
+In our first attempt, we simply replace the declarative CLP(FD)
+constraints by lower-level arithmetic predicates and obtain:
+
+    n_factorial(0, 1).
+    n_factorial(N, F) :-
+            N > 0,
+            N1 is N - 1,
+            F is N * F1,
+            n_factorial(N1, F1).
+
+Unfortunately, this does not work at all, because lower-level
+arithmetic predicates are *moded*: This means that their arguments
+must be sufficiently instantiated. In fact, SWI-Prolog does not even
+compile the above code but yields an error at compilation time.
+Therefore, we must reorder the goals and&nbsp;&mdash; somewhat
+annoyingly&nbsp;&mdash; change this for example to:
+
+    n_factorial(0, 1).
+    n_factorial(N, F) :-
+            N > 0,
+            N1 is N - 1,
+            n_factorial(N1, F1),
+            F is N * F1.
+
+Using this version, naive example queries inspired more by functional
+than by *relational thinking* may easily mislead us into believing
+that this version is working correctly:
+
+    ?- n_factorial(6, F).
+    F = 720 ;
+    false.
+
+Another example:
+
+    ?- n_factorial(3, F).
+    F = 6 ;
+    false.
+
+But what about *more general* queries? For example:
+
+    ?- n_factorial(N, F).
+    N = 0,
+    F = 1 ;
+    ERROR: n_factorial/2: Arguments are not sufficiently instantiated
+
+Unfortunately, this version thus cannot be used to enumerate more than
+one solution, which is another severe drawback in comparison with the
+pure version.
+
+You can make the deficiency a lot worse by arbitrarily adding
+a&nbsp;`!/0` somewhere. Using `!/0` is a quite reliable way to destroy
+almost all declarative properties of your code in most cases, and this
+example is no exception:
+
+    n_factorial(0, 1) :- !.
+    n_factorial(N, F) :-
+            N > 0,
+            N1 is N - 1,
+            n_factorial(N1, F1),
+            F is N * F1.
+
+Believe it or not, but this version is taught in several universities.
+The fact that the following interaction *incorrectly* tells us that
+there is exactly one solution of the factorial relation is of no
+tangible concern in such courses:
+
+    ?- n_factorial(N, F).
+    N = 0,
+    F = 1.
+
+One and zero are the only interesting integers in any case, if you are
+mostly interested in programming imperative assembly languages.
+
+For more usable and general programs, I therefore recommend you stick
+to CLP(FD) constraints for integer arithmetic. You can place your
+goals in any order, just as you would expect from logical conjunction.
+For example:
+
+    :- use_module(library(clpfd)).
+
+    n_factorial(0, 1).
+    n_factorial(N, F) :-
+            N #> 0,
+            N1 #= N - 1,
+            n_factorial(N1, F1),
+            F #= N * F1.
+
+Reordering pure goals can change **termination properties**, but it
+cannot incorrectly lead to failure where there is in fact a solution.
+Therefore, we get with the above CLP(FD) for example:
+
+    ?- n_factorial(N, 3).
+    <loops>
+
+And now we can reason completely declaratively about the code: Knowing
+that (a)&nbsp;CLP(FD) constraints are *pure* and can thus be reordered
+quite liberally and (b)&nbsp;that posting CLP(FD) constraints *always
+terminates*, we *know* that placing CLP(FD) constraints earlier can at
+most *improve*, never *worsen* the desirable termination properties.
+
+Such is the power of staying pure.
+
 ## Acknowledgments
 
 I am extremely grateful to:
