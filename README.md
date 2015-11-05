@@ -114,7 +114,8 @@ following order:
 
    The small dots in each cell indicate how many elements are pruned
    by different **consistency techniques**. In many Sudoku puzzles,
-   using `all_distinct/1` makes labeling unnecessary.
+   using `all_distinct/1` makes labeling unnecessary. Does this mean that
+   we can forget `all_different/1` entirely?
 
 4. [**magic_square.pl**](magic_square.pl): CLP(FD) formulation of [*magic
    squares*](http://mathworld.wolfram.com/MagicSquare.html). This is a good
@@ -128,7 +129,8 @@ following order:
 
    What constraints would you impose to get only a single solution in such
    cases, without losing any solutions that do not belong to the same
-   equivalence class?
+   equivalence class? How many solutions are there for N=4 that are unique
+   up to isomorphism?
 
 5. [**magic_hexagon.pl**](magic_hexagon.pl): Uses CLP(FD) to describe a
    [*magic hexagon*](http://mathworld.wolfram.com/MagicHexagon.html) of
@@ -319,7 +321,7 @@ For example:
 
 Reordering pure goals can change **termination properties**, but it
 cannot incorrectly lead to failure where there is in fact a solution.
-Therefore, we get with the above CLP(FD) for example:
+Therefore, we get with the above CLP(FD) version for example:
 
     ?- n_factorial(N, 3).
     <loops>
