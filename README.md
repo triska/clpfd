@@ -256,9 +256,9 @@ annoyingly&nbsp;&mdash; change this for example to:
             n_factorial(N1, F1),
             F is N * F1.
 
-Using this version, naive example queries inspired more by functional
-than by *relational thinking* may easily mislead us into believing
-that this version is working correctly:
+Naive example queries inspired more by *functional* than by
+*relational* thinking may easily mislead us into believing that this
+version is working correctly:
 
     ?- n_factorial(6, F).
     F = 720 ;
@@ -305,9 +305,10 @@ Zero and one are the only important integers in any case, if you are
 mostly interested in programming at a very low level.
 
 For more usable and general programs, I therefore recommend you stick
-to CLP(FD) constraints for integer arithmetic. You can place your
-goals in any order, just as you would expect from logical conjunction.
-For example:
+to CLP(FD) constraints for integer arithmetic. You can place pure
+goals in any order without changing the declarative meaning of your
+program, just as you would expect from logical conjunction. For
+example:
 
     :- use_module(library(clpfd)).
 
