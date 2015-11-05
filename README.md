@@ -293,17 +293,16 @@ example is no exception:
             n_factorial(N1, F1),
             F is N * F1.
 
-Believe it or not, but this version is taught in several universities.
-The fact that the following interaction *incorrectly* tells us that
-there is exactly one solution of the factorial relation is of no
-tangible concern in such courses:
+This version appears in several places. The fact that the following
+interaction *incorrectly* tells us that there is exactly one solution of
+the factorial relation is apparently no cause for concern there:
 
     ?- n_factorial(N, F).
     N = 0,
     F = 1.
 
-One and zero are the only interesting integers in any case, if you are
-mostly interested in programming imperative assembly languages.
+Zero and one are the only important integers in any case, if you are
+mostly interested in programming at a very low level.
 
 For more usable and general programs, I therefore recommend you stick
 to CLP(FD) constraints for integer arithmetic. You can place your
