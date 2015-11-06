@@ -127,10 +127,10 @@ following order:
 
    ![Magic square solution](figures/magic_square1.png) ![Magic square transposed](figures/magic_square2.png)
 
-   What constraints would you impose to get only a single solution in such
-   cases, without losing any solutions that do not belong to the same
-   equivalence class? How many solutions are there for N=4 that are unique
-   up to isomorphism?
+   Can you impose additional constraints so that you get only a single
+   solution in such cases, without losing any solutions that do not
+   belong to the same equivalence class? How many solutions are there
+   for N=4 that are unique up to isomorphism?
 
 5. [**magic_hexagon.pl**](magic_hexagon.pl): Uses CLP(FD) to describe a
    [*magic hexagon*](http://mathworld.wolfram.com/MagicHexagon.html) of
