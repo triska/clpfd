@@ -277,9 +277,9 @@ But what about *more general* queries? For example:
     F = 1 ;
     ERROR: n_factorial/2: Arguments are not sufficiently instantiated
 
-Unfortunately, this version thus cannot be used to enumerate more than
-one solution, which is another severe drawback in comparison with the
-pure version.
+Unfortunately, this version thus cannot be directly used to enumerate
+more than one solution, which is another severe drawback in comparison
+with the pure version.
 
 You can make the deficiency a lot worse by arbitrarily adding
 a&nbsp;`!/0` somewhere. Using `!/0` is a quite reliable way to destroy
