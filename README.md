@@ -110,7 +110,7 @@ following order:
    [`all_distinct/1`](http://www.swi-prolog.org/pldoc/man?predicate=all_distinct/1)
    on different puzzles:
 
-   ![Sudoku with all_different/1](figures/sudoku_all_different.png) ![Sudoku with all_distinct/1](figures/sudoku_all_distinct.png)
+   ![Sudoku with all_different/1](figures/sudoku_all_different.png) ![](figures/filler20.png) ![Sudoku with all_distinct/1](figures/sudoku_all_distinct.png)
 
    The small dots in each cell indicate how many elements are pruned
    by different **consistency techniques**. In many Sudoku puzzles,
@@ -125,7 +125,7 @@ following order:
    the following two solutions are essentially identical, since one can be
    obtained from the other by reflecting elements along the main diagonal:
 
-   ![Magic square solution](figures/magic_square1.png) ![Magic square transposed](figures/magic_square2.png)
+   ![Magic square solution](figures/magic_square1.png) ![](figures/filler20.png) ![Magic square transposed](figures/magic_square2.png)
 
    Can you impose additional constraints so that you get only a single
    solution in such cases, without losing any solutions that do not
@@ -139,7 +139,7 @@ following order:
    of length 3, 4 and 5) is equal to 38. One solution of this task is shown
    in the right picture:
 
-   ![Magic hexagon grid](figures/magic_hexagon.png) ![Magic hexagon solution](figures/magic_hexagon_solution.png)
+   ![Magic hexagon grid](figures/magic_hexagon.png) ![](figures/filler20.png) ![Magic hexagon solution](figures/magic_hexagon_solution.png)
 
    This is an example of a task that looks very simple at first, yet
    is almost impossibly hard to solve manually. It is easy to solve
@@ -154,7 +154,7 @@ following order:
    For example, using the labeling strategy `ff`, you can easliy find
    solutions for 100 queens and more. Sample solutions for 8 and 50 queens:
 
-   ![Solution for 8 queens](figures/queens8_solution.png) ![Solution for 50 queens](figures/queens50_solution.png)
+   ![Solution for 8 queens](figures/queens8_solution.png) ![](figures/filler20.png) ![Solution for 50 queens](figures/queens50_solution.png)
 
    Try to find solutions for larger N. Reorder the variables so that
    `ff` breaks ties by selecting more central variables first.
@@ -167,7 +167,7 @@ following order:
    with a global constraint. Sample solutions, using an 8x8 and a 16x16
    board:
 
-   ![Closed knight's tour on an 8x8 board](figures/knight8_solution.png) ![Closed knight's tour on a 16x16 board](figures/knight16_solution.png)
+   ![Closed knight's tour on an 8x8 board](figures/knight8_solution.png) ![](figures/filler20.png) ![Closed knight's tour on a 16x16 board](figures/knight16_solution.png)
 
    Decide whether `circuit/1` can also be used to model tours that are
    not necessarily closed. If not, why not? If possible, do it.
