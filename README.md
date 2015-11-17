@@ -227,6 +227,107 @@ For better performance and many more specialised constraints, I highly
 recommend you obtain a copy of SICStus Prolog, and use it to solve
 more serious tasks with CLP(FD).
 
+## Defaulty syntax and monotonicity
+
+### Default execution mode: Defaulty syntax
+
+We have now seen several examples of CLP(FD) constraints being true
+relations that can be used in all directions.
+
+Alas, some non-relational deficiencies still remain in the default
+mode of `library(clpfd)`. For example, consider the interaction:
+
+<pre>
+?- X = 1+1, X #= 2.
+<b>X = 1+1</b>.
+</pre>
+
+and contrast it with exchanging the two goals:
+
+<pre>
+?- X #= 2, X = 1+1.
+<b>false</b>.
+</pre>
+
+This difference is obvisouly undesirable: It breaks *commutativity*
+that we expect from logical conjunction. Even worse, this breaks
+**monotonicity**: By *adding* a further constraint, we obtain new
+solutions:
+
+<pre>
+?- <b>X=1+1</b>, X #= 2, X = 1+1.
+<b>X = 1+1</b>.
+</pre>
+
+How can such problematic cases even arise? The reason is that CLP(FD)
+expressions are *defaulty*: In CLP(FD) expressions, a logical
+*variable* is always regarded as standing for a concrete *integer*,
+although declaratively, it also stands for other
+CLP(FD)&nbsp;expressions that *also* make a given constraint true. For
+example, when we post the constraint:
+
+    ?- X #= 2.
+
+then we get the *single* solution `X = 2`. It is clear though that,
+from a declarative point of view, `X = 1+1`, `X = 0+2`, `X = 3-1+0`
+and other CLP(FD)&nbsp;expressions are also perfectly admissible
+solutions. However, the constraint solver impurely *commits* to
+treating each CLP(FD)&nbsp;variable as standing for a single integer.
+
+The way to avoid defaultyness is, as always, to equip all entities
+with a *dedicated functor*. This way, the cases can be cleanly
+distinguished.
+
+### Dedicated syntax for CLP(FD) variables
+
+For this reason, `library(clpfd)` features a **dedicated syntax** to
+mark variables that stand for **concrete integers**. This is
+accomplished by wrapping them with&nbsp;`?/1`. For example:
+
+    ?- ?(X) #= 2.
+    X = 2.
+
+If we consistently use this syntax in CLP(FD) constraints, then the
+discrepancy above cannot arise:
+
+<pre>
+?- X = 1+1, ?(X) #= 2.
+<b>ERROR</b>: Type error: `integer' expected, found `1+1' (a compound)
+</pre>
+
+and after exchanging the goals:
+
+<pre>
+?- ?(X) #= 2, X = 1+1.
+<b>false</b>.
+</pre>
+
+Note that a `type error` can be replaced by silent failure, so the two
+cases are now really declaratively equivalent.
+
+### Ensuring monotonicity: `clpfd_monotonic`
+
+If you set the Prolog flag `clpfd_monotonic` to `true`, then CLP(FD)
+is **monotonic**: In that mode, you get a clean `instantiation error`
+if you use a variable *without* the `?/1`&nbsp;wrapper in
+CLP(FD)&nbsp;constraints.
+
+For example:
+
+<pre>
+?- set_prolog_flag(clpfd_monotonic, true).
+true.
+
+?- X #= 2.
+<b>ERROR:</b> Arguments are not sufficiently instantiated
+
+?- ?(X) #= 2.
+X = 2.
+</pre>
+
+Set `clpfd_monotonic` to `true` to enjoy the utmost relational
+benefits of CLP(FD).
+
 ## An impure alternative: Low-level integer arithmetic
 
 Suppose for a moment that CLP(FD) constraints were not available in
