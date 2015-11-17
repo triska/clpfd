@@ -213,7 +213,8 @@ can make them visible by wrapping the goal in `call_residue_vars/2`:
     X1#=<X2+ -1,
     X2#=<X1+ -1.
 
-There is a solution only if you can satisfy these residual goals.
+There is a solution only *if* you can satisfy these residual goals.
+Can&nbsp;you?
 
 ## SICStus compatibility
 
