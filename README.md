@@ -2,7 +2,7 @@
 
 CLP(FD), Constraint Logic Programming over Finite Domains, is
 available in SWI-Prolog as
-[**library(clpfd)**](http://www.swi-prolog.org/man/clpfd.html).
+[**library(clpfd)**](http://eu.swi-prolog.org/man/clpfd.html).
 
 This repository contains usage examples and tests of the library.
 
@@ -17,10 +17,10 @@ programming with reasoning over specialised domains.
 In the case of CLP(FD), the domain is the set of _integers_.
 
 CLP(FD) constraints like
-[`(#=)/2`](http://www.swi-prolog.org/pldoc/doc_for?object=%23%3D%20/%202),
-[`(#\=)/2`](http://www.swi-prolog.org/pldoc/doc_for?object=%23%5C%3D%20/%202),
+[`(#=)/2`](http://eu.swi-prolog.org/pldoc/doc_for?object=%23%3D%20/%202),
+[`(#\=)/2`](http://eu.swi-prolog.org/pldoc/doc_for?object=%23%5C%3D%20/%202),
 and
-[`(#<)/2`](http://www.swi-prolog.org/pldoc/doc_for?object=%23%3C%20/%202)
+[`(#<)/2`](http://eu.swi-prolog.org/pldoc/doc_for?object=%23%3C%20/%202)
 are meant to be used as pure alternatives for lower-level arithmetic
 primitives over integers. Importantly, they can be used in *all
 directions*.
@@ -93,7 +93,7 @@ following order:
 
    * It is good practice to separate the **core relation** from
      `labeling/2`. See the [CLP(FD)
-     documentation](http://www.swi-prolog.org/man/clpfd.html) for more
+     documentation](http://eu.swi-prolog.org/man/clpfd.html) for more
      information about this subject.
 
    * You can use this example to illustrate that the CLP(FD) system is able
@@ -105,9 +105,9 @@ following order:
    a simple and well-known puzzle. This example is well suited for
    understanding the impact of different **propagation strengths**: Use it
    to compare
-   [`all_different/1`](http://www.swi-prolog.org/pldoc/man?predicate=all_different/1)
+   [`all_different/1`](http://eu.swi-prolog.org/pldoc/man?predicate=all_different/1)
    and
-   [`all_distinct/1`](http://www.swi-prolog.org/pldoc/man?predicate=all_distinct/1)
+   [`all_distinct/1`](http://eu.swi-prolog.org/pldoc/man?predicate=all_distinct/1)
    on different puzzles:
 
    ![](figures/filler.png) ![Sudoku with all_different/1](figures/sudoku_all_different.png) ![](figures/filler20.png) ![Sudoku with all_distinct/1](figures/sudoku_all_distinct.png)
@@ -150,7 +150,7 @@ following order:
    puzzle*](https://en.wikipedia.org/wiki/Eight_queens_puzzle) with CLP(FD)
    constraints. This example is a good candidate to experiment with
    different **search strategies**, specified as options of
-   [`labeling/2`](http://www.swi-prolog.org/pldoc/man?predicate=labeling/2).
+   [`labeling/2`](http://eu.swi-prolog.org/pldoc/man?predicate=labeling/2).
    For example, using the labeling strategy `ff`, you can easliy find
    solutions for 100 queens and more. Sample solutions for 8 and 50 queens:
 
@@ -162,7 +162,7 @@ following order:
 7. [**knight_tour.pl**](knight_tour.pl): Closed Knight's Tour using CLP(FD)
    constraints. This is an example of using a more complex **global
    constraint** called
-   [`circuit/1`](http://www.swi-prolog.org/pldoc/man?predicate=circuit/1).
+   [`circuit/1`](http://eu.swi-prolog.org/pldoc/man?predicate=circuit/1).
    It shows how a problem can be transformed so that it can be expressed
    with a global constraint. Sample solutions, using an 8x8 and a 16x16
    board:
@@ -190,7 +190,7 @@ Since integer arithmetic is in general *undecidable*, CLP(FD)
 constraints are necessarily *incomplete*. This means that you cannot,
 in general, take the fact that a CLP(FD) constraint *succeeds* as an
 indication that there are any solutions. Therefore, you need to use
-[`call_residue_vars/2`](http://www.swi-prolog.org/pldoc/man?predicate=call_residue_vars/2)
+[`call_residue_vars/2`](http://eu.swi-prolog.org/pldoc/man?predicate=call_residue_vars/2)
 to see if any constraints are still pending. For example:
 
     :- use_module(library(clpfd)).
@@ -440,13 +440,13 @@ Such is the power of staying pure.
 
 I am extremely grateful to:
 
-[**Jan Wielemaker**](http://www.swi-prolog.org) for providing the
+[**Jan Wielemaker**](http://eu.swi-prolog.org) for providing the
 Prolog system that made all this possible in the first place.
 
 [**Tom Schrijvers**](http://people.cs.kuleuven.be/~tom.schrijvers/),
 who has generously contributed several important constraint libraries
 to SWI-Prolog
-([`dif/2`](http://www.swi-prolog.org/pldoc/man?predicate=dif/2)!!),
+([`dif/2`](http://eu.swi-prolog.org/pldoc/man?predicate=dif/2)!!),
 and from whom I learned a lot.
 
 [**Ulrich Neumerkel**](http://www.complang.tuwien.ac.at/ulrich/), who
