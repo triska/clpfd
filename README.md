@@ -92,9 +92,10 @@ following order:
      most general query. They are equivalent to the original query.
 
    * It is good practice to separate the **core relation** from
-     `labeling/2`. See the [CLP(FD)
-     documentation](http://eu.swi-prolog.org/man/clpfd.html) for more
-     information about this subject.
+     `labeling/2`, so that termination and determinism can be observed
+     without an expensive search for concrete solutions. See the
+     [CLP(FD) documentation](http://eu.swi-prolog.org/man/clpfd.html)
+     for more information about this subject.
 
    * You can use this example to illustrate that the CLP(FD) system is able
      to **propagate** many things that can also be found with human
