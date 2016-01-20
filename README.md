@@ -353,10 +353,11 @@ constraints by lower-level arithmetic predicates and obtain:
 
 Unfortunately, this does not work at all, because lower-level
 arithmetic predicates are *moded*: This means that their arguments
-must be sufficiently instantiated. In fact, SWI-Prolog does not even
-compile the above code but yields an error at compilation time.
-Therefore, we must reorder the goals and&nbsp;&mdash; somewhat
-annoyingly&nbsp;&mdash; change this for example to:
+must be sufficiently instantiated at the time they are invoked. In
+fact, SWI-Prolog does not even compile the above code but yields an
+error at compilation time. Therefore, we must reorder the goals
+and&nbsp;&mdash; somewhat annoyingly&nbsp;&mdash; change this for
+example to:
 
     n_factorial(0, 1).
     n_factorial(N, F) :-
