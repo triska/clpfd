@@ -442,7 +442,24 @@ quite liberally and (b)&nbsp;that posting CLP(FD) constraints *always
 terminates*, we *know* that placing CLP(FD) constraints earlier can at
 most *improve*, never *worsen* the desirable termination properties.
 
-Such is the power of staying pure.
+Therefore, we change the definition to the version shown initially:
+
+    :- use_module(library(clpfd)).
+
+    n_factorial(0, 1).
+    n_factorial(N, F) :-
+            N #> 0,
+            N1 #= N - 1,
+            F #= N * F1,
+            n_factorial(N1, F1).
+
+The sample query now terminates:
+
+    ?- n_factorial(N, 3).
+    false.
+
+Using CLP(FD) constraints has allowed us to improve the termination
+properties of this predicate by purely declarative reasoning.
 
 ## Acknowledgments
 
