@@ -4,7 +4,8 @@ CLP(FD), Constraint Logic Programming over Finite Domains, is
 available in SWI-Prolog as
 [**library(clpfd)**](http://eu.swi-prolog.org/man/clpfd.html).
 
-This repository contains usage examples and tests of the library.
+This repository contains usage examples that illustrate important
+concepts and principles of the CLP(FD) library.
 
 [**clpfd.pdf**](clpfd.pdf) is a _shortened version_ of the library
 documentation, intended as supplementary lecture material.
