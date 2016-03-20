@@ -65,7 +65,7 @@ and also in the most general case:
 
 This repository contains several example programs. The main predicates
 are all completely pure and can be used as true relations. This means
-that you can use the programs to:
+that you can use the *same* program to:
 
 * *find* a single solution
 * *enumerate* all solutions
