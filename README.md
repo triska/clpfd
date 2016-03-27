@@ -226,14 +226,19 @@ Can&nbsp;you?
 
 ## SICStus compatibility
 
-With SWI-Prolog's `library(clpfd)`, I am generally aiming for API
-compatibility with SICStus Prolog. Therefore, all examples work with
-at most small changes with SICStus Prolog too. For example, instead of
-`(ins)/2`, you need to use `domain/3` in SICStus Prolog.
+SWI-Prolog's `library(clpfd)` is useful for teaching CLP(FD)
+constraints, and gives users a free glimpse of what a more valuable
+Prolog&nbsp;system can do. The SWI&nbsp;library is built to let you
+easily switch to the much faster and more sophisticated CLP(FD) system
+of [**SICStus&nbsp;Prolog**](https://sicstus.sics.se/) as soon as you
+need to satisfy the legal and other requirements that arise when you
+use Prolog in a professional context. Therefore, all examples work
+with at most small changes with SICStus&nbsp;Prolog too. For example,
+instead of `(ins)/2`, you need to use `domain/3` in SICStus Prolog.
 
-For better performance and many more specialised constraints, I highly
-recommend you obtain a copy of SICStus Prolog, and use it to solve
-more serious tasks with CLP(FD).
+For better ISO conformance, higher performance and many more
+specialised constraints, it is strongly recommended to obtain a copy
+of SICStus Prolog, and to use it to solve more serious tasks.
 
 ## Defaulty syntax and monotonicity
 
