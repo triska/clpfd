@@ -10,6 +10,16 @@ concepts and principles of the CLP(FD) library.
 [**clpfd.pdf**](clpfd.pdf) is a _shortened version_ of the library
 documentation, intended as supplementary lecture material.
 
+In the following, it is assumed that you have put the following
+directive in your `.swiplrc` initialisation file:
+
+    :- use_module(library(clpfd)).
+
+Putting this directive in your initialisation file is the recommended
+way to make integer constraints available in **all your programs**.
+This is advisable because almost all Prolog programs also reason about
+integers in one way or another.
+
 ## Using CLP(FD) constraints
 
 CLP(FD) is an instance of the general CLP(.) scheme, extending logic
@@ -28,8 +38,6 @@ directions*.
 
 For example, we can use CLP(FD) constraints to obtain a version of
 `n_factorial/2` that can be used as a true relation:
-
-    :- use_module(library(clpfd)).
 
     n_factorial(0, 1).
     n_factorial(N, F) :-
@@ -200,8 +208,6 @@ in general, take the fact that a CLP(FD) constraint *succeeds* as an
 indication that there are any solutions. Therefore, you need to use
 [`call_residue_vars/2`](http://eu.swi-prolog.org/pldoc/man?predicate=call_residue_vars/2)
 to see if any constraints are still pending. For example:
-
-    :- use_module(library(clpfd)).
 
     declarative_false :-
             X #< Y,
@@ -426,8 +432,6 @@ goals in any order without changing the declarative meaning of your
 program, just as you would expect from logical conjunction. For
 example:
 
-    :- use_module(library(clpfd)).
-
     n_factorial(0, 1).
     n_factorial(N, F) :-
             N #> 0,
@@ -449,8 +453,6 @@ terminates*, we *know* that placing CLP(FD) constraints earlier can at
 most *improve*, never *worsen* the desirable termination properties.
 
 Therefore, we change the definition to the version shown initially:
-
-    :- use_module(library(clpfd)).
 
     n_factorial(0, 1).
     n_factorial(N, F) :-
