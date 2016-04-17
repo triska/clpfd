@@ -230,21 +230,17 @@ can make them visible by wrapping the goal in `call_residue_vars/2`:
 There is a solution only *if* you can satisfy these residual goals.
 Can&nbsp;you?
 
-## SICStus compatibility
+## SICStus compatibility and CLP(Z)
 
-SWI-Prolog's `library(clpfd)` is useful for teaching CLP(FD)
-constraints, and gives users a free glimpse of what a more valuable
-Prolog&nbsp;system can do. The SWI&nbsp;library is built to let you
-easily switch to the much faster and more sophisticated CLP(FD) system
-of [**SICStus&nbsp;Prolog**](https://sicstus.sics.se/) as soon as you
-need to satisfy the legal and other requirements that arise when you
-use Prolog in a professional context. Therefore, all examples work
-with at most small changes with SICStus&nbsp;Prolog too. For example,
-instead of `(ins)/2`, you need to use `domain/3` in SICStus Prolog.
+Development of this library has moved to
+[**SICStus&nbsp;Prolog**](https://sicstus.sics.se/).
 
-For better ISO conformance, higher performance and many more
-specialised constraints, it is strongly recommended to obtain a copy
-of SICStus Prolog, and to use it to solve more serious tasks.
+All ongoing and future development of this library takes place as
+[**CLP(Z)**](https://github.com/triska/clpz) for SICStus&nbsp;Prolog.
+
+For ISO conformance, higher performance and professional support, it
+is strongly recommended that you obtain a copy of SICStus&nbsp;Prolog
+and use it for all serious Prolog development.
 
 ## Defaulty syntax and monotonicity
 
