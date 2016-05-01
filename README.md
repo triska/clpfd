@@ -297,23 +297,24 @@ distinguished.
 
 For this reason, `library(clpfd)` features a **dedicated syntax** to
 mark variables that stand for **concrete integers**. This is
-accomplished by wrapping them with&nbsp;`?/1`. For example:
+accomplished by wrapping them with&nbsp;`#/1` (preferred)
+or&nbsp;`?/1`. For example:
 
-    ?- ?(X) #= 2.
+    ?- #(X) #= 2.
     X = 2.
 
 If we consistently use this syntax in CLP(FD) constraints, then the
 discrepancy above cannot arise:
 
 <pre>
-?- X = 1+1, ?(X) #= 2.
+?- X = 1+1, #(X) #= 2.
 <b>ERROR</b>: Type error: `integer' expected, found `1+1' (a compound)
 </pre>
 
 and after exchanging the goals:
 
 <pre>
-?- ?(X) #= 2, X = 1+1.
+?- #(X) #= 2, X = 1+1.
 <b>false</b>.
 </pre>
 
@@ -324,7 +325,7 @@ cases are now really declaratively equivalent.
 
 If you set the Prolog flag `clpfd_monotonic` to `true`, then CLP(FD)
 is **monotonic**: In that mode, you get a clean `instantiation error`
-if you use a variable *without* the `?/1`&nbsp;wrapper in
+if you use a variable *without* the `#/1`&nbsp;wrapper in
 CLP(FD)&nbsp;constraints.
 
 For example:
@@ -336,7 +337,7 @@ true.
 ?- X #= 2.
 <b>ERROR:</b> Arguments are not sufficiently instantiated
 
-?- ?(X) #= 2.
+?- #(X) #= 2.
 X = 2.
 </pre>
 
