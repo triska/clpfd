@@ -270,7 +270,7 @@ that we expect from logical conjunction. Even worse, this breaks
 solutions:
 
 <pre>
-?- <b>X=1+1</b>, X #= 2, X = 1+1.
+?- <b>X = 1+1</b>, X #= 2, X = 1+1.
 <b>X = 1+1</b>.
 </pre>
 
