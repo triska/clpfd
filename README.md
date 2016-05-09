@@ -205,11 +205,11 @@ following order:
 When studying Prolog and CLP(FD) constraints, it is often very useful
 to show *animations* of search processes. An instructional example:
 
-[**N-queens animation**](http://www.metalevel.at/queens/): This
+[**N-queens animation**](https://www.metalevel.at/queens/): This
 visualizes the search process for the N-queens example.
 
 You can use similar PostScript instructions to create [custom
-animations](http://www.metalevel.at/postscript/animations.html) for
+animations](https://www.metalevel.at/postscript/animations.html) for
 other examples.
 
 ## Propagation strength of CLP(FD) constraints
