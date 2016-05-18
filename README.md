@@ -20,18 +20,6 @@ way to make integer constraints available in **all your programs**.
 This is advisable because almost all Prolog programs also reason about
 integers in one way or another.
 
-## SICStus compatibility and CLP(Z)
-
-Development of this library has moved to
-[**SICStus&nbsp;Prolog**](https://sicstus.sics.se/).
-
-All ongoing and future development of this library takes place as
-[**CLP(Z)**](https://github.com/triska/clpz) for SICStus&nbsp;Prolog.
-
-For ISO conformance, higher performance and professional support, it
-is strongly recommended that you obtain a copy of SICStus&nbsp;Prolog
-and use it for all serious Prolog development.
-
 ## Using CLP(FD) constraints
 
 CLP(FD) is an instance of the general CLP(.) scheme, extending logic
@@ -465,6 +453,16 @@ The sample query now terminates:
 
 Using CLP(FD) constraints has allowed us to improve the termination
 properties of this predicate by purely declarative reasoning.
+
+## Current and future work
+
+All current and future development of this library takes place as
+[**CLP(Z)**](https://github.com/triska/clpz) for
+[SICStus&nbsp;Prolog](https://sicstus.sics.se/).
+
+For ISO conformance, higher performance and professional support, it
+is strongly recommended that you obtain a copy of SICStus&nbsp;Prolog
+and use it for all serious Prolog development.
 
 ## Acknowledgments
 
