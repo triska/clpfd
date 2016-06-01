@@ -188,6 +188,14 @@ following order:
    Decide whether `circuit/1` can also be used to model tours that are
    not necessarily closed. If not, why not? If possible, do it.
 
+8. [**tasks.pl**](tasks.pl): A task scheduling example, using the
+   [`cumulative/2`](http://eu.swi-prolog.org/pldoc/man?predicate=cumulative/2)
+   global constraint. The `min/1` labeling option is used to minimize
+   the total duration.
+
+   ![](figures/filler.png) ![Task scheduling](figures/tasks.png)
+
+
 ## Animations
 
 When studying Prolog and CLP(FD) constraints, it is often very useful
