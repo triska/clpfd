@@ -7,8 +7,14 @@ available in SWI-Prolog as
 This repository contains usage examples that illustrate important
 concepts and principles of the CLP(FD) library.
 
-[**clpfd.pdf**](clpfd.pdf) is a _shortened version_ of the library
+[clpfd.pdf](clpfd.pdf) is a _shortened version_ of the library
 documentation, intended as supplementary lecture material.
+
+Read [**The Power of Prolog**](https://www.metalevel.at/prolog) for
+more information, and in particular the introduction to [declarative
+integer arithmetic](https://www.metalevel.at/prolog/clpfd).
+
+See also the successor library, [**CLP(Z)**](https://github.com/triska/clpz).
 
 In the following, it is assumed that you have put the following
 directive in your `.swiplrc` initialisation file:
@@ -19,6 +25,25 @@ Putting this directive in your initialisation file is the recommended
 way to make integer constraints available in **all your programs**.
 This is advisable because almost all Prolog programs also reason about
 integers in one way or another.
+
+## ERROR: is/2: Arguments are not sufficiently instantiated
+
+Does an error like the following seem familiar to you?
+
+<pre>
+?- 3 is 1+Y.
+<b>ERROR: is/2: Arguments are not sufficiently instantiated</b>
+</pre>
+
+CLP(FD) puts an end to such low-level limitations:
+
+<pre>
+?- 3 #= 1+Y.
+<b>Y = 2.</b>
+</pre>
+
+When learning Prolog, use *constraints* to free your mind from
+procedural considerations, and focus on a *declarative* reading!
 
 ## Using CLP(FD) constraints
 
@@ -205,7 +230,7 @@ to show *animations* of search processes. An instructional example:
 visualizes the search process for the N-queens example.
 
 You can use similar PostScript instructions to create [custom
-animations](https://www.metalevel.at/postscript/animations.html) for
+animations](https://www.metalevel.at/postscript/animations) for
 other examples.
 
 ## Propagation strength of CLP(FD) constraints
